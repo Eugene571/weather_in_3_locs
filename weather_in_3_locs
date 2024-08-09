@@ -1,13 +1,12 @@
 import requests
-"""Импортируем requests для работы с запросами"""
 
-numbered_loc_dict = {
-    '1': 'london',
-    '2': 'svo',
-    '3': 'череповец?n&lang=ru&?M&?q&?T',
-}
+locs = [
+    'london',
+    'svo',
+    'череповец',
+]
 
-for item in numbered_loc_dict.values():
-    res = requests.get(f'https://ru.wttr.in/{item}')
+for loc in locs:
+    res = requests.get('https://ru.wttr.in/' + loc + '?n&lang=ru&?M&?q&?T')
     res.raise_for_status()
     print(res.text)
