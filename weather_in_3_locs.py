@@ -9,7 +9,14 @@ def main():
     ]
 
     for place in places:
-        wtr_in_console = requests.get('https://ru.wttr.in/' + place + '?n&lang=ru&?M&?q&?T')
+        payload = {
+            'lang=ru': '',
+            'M': '',
+            'n': '',
+            'q': '',
+            'T': ''
+        }
+        wtr_in_console = requests.get('https://ru.wttr.in/' + place, params=payload)
         wtr_in_console.raise_for_status()
         print(wtr_in_console.text)
 
