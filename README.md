@@ -7,5 +7,5 @@
 1. Клонируем репозиторий: ``git clone https://github.com/Eugene571/weather_in_3_locs``
 2. Устанавливаем необходимые пакеты: ``pip install -r weather_in_3_locs\requirements.txt``
 
-Если установка проведена верно, программа выдаёт в консоль результат:
+Если установка проведена верно, при запуске программа выдаёт в консоль результат:
 ![image](https://github.com/user-attachments/assets/5adaad50-d1bd-4a6d-85d4-66ea132bb838)
