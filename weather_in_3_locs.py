@@ -14,7 +14,7 @@ def main():
             'M': '',
             'n': '',
             'q': '',
-            'T': ''
+            'T': '',
         }
         wtr_in_console = requests.get('https://ru.wttr.in/' + place, params=payload)
         wtr_in_console.raise_for_status()
