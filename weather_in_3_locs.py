@@ -16,9 +16,9 @@ def main():
             'q': '',
             'T': '',
         }
-        wtr_in_console = requests.get('https://ru.wttr.in/' + place, params=payload)
-        wtr_in_console.raise_for_status()
-        print(wtr_in_console.text)
+        weather_reqs = requests.get(f'https://wttr.in/{place}', params=payload)
+        weather_reqs.raise_for_status()
+        print(weather_reqs.text)
 
 
 if __name__ == '__main__':
