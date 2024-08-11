@@ -10,15 +10,14 @@ def main():
 
     for place in places:
         payload = {
-            'lang=ru': '',
             'M': '',
             'n': '',
             'q': '',
             'T': '',
         }
-        weather_reqs = requests.get(f'https://wttr.in/{place}', params=payload)
-        weather_reqs.raise_for_status()
-        print(weather_reqs.text)
+        weather_response = requests.get(f'https://ru.wttr.in/{place}', params=payload)
+        weather_response.raise_for_status()
+        print(weather_response.text)
 
 
 if __name__ == '__main__':
